@@ -20,6 +20,7 @@ input {
   font-family: $font-text;
   border: none;
   background-color: #eaeaea;
+  width: 120px;
 
   &:focus {
     outline: none;
@@ -58,9 +59,5 @@ input {
     height: 50px;
     background-color: #eaeaea;
     box-shadow: 0px 4px 4px 0px #00000026;
-
-    input {
-      width: 100px;
-    }
   }
 }
