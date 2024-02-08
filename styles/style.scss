@@ -14,6 +14,7 @@ $color-tertiary: #99e2d0;
 body {
   font-family: $font-text;
   margin: 0;
+  background: #F6F6F6;
 }
 
 input {
@@ -78,14 +79,50 @@ input {
 
 /*----------- Main ---------- */
 
+.article {
+  display: flex;
+  flex-direction: column; 
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+
+  &__h1 {
+    margin-top: 40px;
+  }
+
+  &__p {
+    margin-top: 0;
+    color: #353535;
+    font-size: 18px;
+  }
+
+  &__button {
+    background: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
+    border: none;
+    color: white;
+    padding: 15px 30px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    font-weight: 500;
+    border-radius: 25px;
+    margin-bottom: 40px;
+  }
+}
+
+/*----------- Fonctionnement ---------- */
+
 .fonctionnement {
   display: flex;
   flex-direction: column;
   width: 100%;
+  background: #FFFFFF;
 
   h1 {
     padding: 0 15px;
     font-weight: 600;
+    padding-top: 40px;
   }
 
   &__div {
@@ -106,6 +143,10 @@ input {
     p {
       font-weight: 600;
     }
+
+    &:last-child {
+      margin-bottom: 50px;
+    }
   }
   
   &__number {
@@ -120,6 +161,7 @@ input {
     border-radius: 50%;
     color: white;
   }
+
 }
 
 
