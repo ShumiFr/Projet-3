@@ -42,13 +42,20 @@ input {
   justify-content: center;
 
   &__logo {
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    height: 60px;
-    box-shadow: 0px 2px 4px 0px #00000026;
+
+    &--mobile {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      height: 60px;
+      box-shadow: 0px 2px 4px 0px #00000026;
+    }
+
+    &--desktop {
+      display: none;
+    }
   }
 
   &__input {
@@ -68,3 +75,51 @@ input {
     }
   }
 }
+
+/*----------- Main ---------- */
+
+.fonctionnement {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+
+  h1 {
+    padding: 0 15px;
+    font-weight: 600;
+  }
+
+  &__div {
+    display: flex;
+    align-items: center;
+    margin: 15px;
+    padding: 15px 30px;
+    border-radius: 20px;
+    background: #F6F6F6;
+    box-shadow: 0px 4px 15px 0px #00000026;
+
+    i {
+      font-size: large;
+      margin-right: 20px;
+      color: #7E7E7E;
+    }
+
+    p {
+      font-weight: 600;
+    }
+  }
+  
+  &__number {
+    display: flex;
+    position: absolute;
+    align-items: center;
+    justify-content: center;
+    left: 5px;
+    background: $color-primary;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    color: white;
+  }
+}
+
+
