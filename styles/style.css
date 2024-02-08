@@ -10,6 +10,7 @@ input {
   font-family: "Roboto", sans-serif;
   border: none;
   background-color: #eaeaea;
+  width: 120px;
 }
 input:focus {
   outline: none;
@@ -48,6 +49,8 @@ input::placeholder {
 .header__input input {
   height: 19px;
   font-size: large;
+  width: 120px;
+  margin-left: 10px;
 }
 
 /*# sourceMappingURL=style.css.map */

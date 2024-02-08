@@ -59,5 +59,12 @@ input {
     height: 50px;
     background-color: #eaeaea;
     box-shadow: 0px 4px 4px 0px #00000026;
+
+    input {
+      height: 19px;
+      font-size: large;
+      width: 120px;
+      margin-left: 10px;
+    }
   }
 }
