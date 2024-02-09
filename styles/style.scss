@@ -230,7 +230,7 @@ ul, li {
     transform: scale(1.15);
     transition: opacity 400ms;
     animation-name: liked;
-    animation-duration: 1000ms;
+    animation-duration: 800ms;
     opacity: 1;
   }
 
@@ -243,16 +243,6 @@ ul, li {
     }
     100% {
       transform: scale(1.15);
-    }
-  }
-
-  @keyframes unliked {
-    0% {
-      transform: scale(0.8);
-    }
-    100% {
-      transform: scale(0.8);
-      opacity: 0;
     }
   }
 }
