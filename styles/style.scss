@@ -207,11 +207,53 @@ ul, li {
   height: 35%;
   margin-left: 20px;
 
-  i {
+  img {
     position: absolute;
     right: 20px;
     bottom: 40px;
-    font-size: 24px;
+  }
+
+  .hidden-checkbox {
+    display: none;
+  }
+
+  .heart-label .liked {
+    opacity: 0;
+  }
+
+  .hidden-checkbox:checked + .heart-label .default {
+    transition: opacity 400ms;
+    opacity: 0;
+  }
+
+  .hidden-checkbox:checked + .heart-label .liked {
+    transform: scale(1.15);
+    transition: opacity 400ms;
+    animation-name: liked;
+    animation-duration: 1000ms;
+    opacity: 1;
+  }
+
+  @keyframes liked {
+    0% {
+      transform: scale(1.15);
+    }
+    50% {
+      transform: scale(1.5);
+    }
+    100% {
+      transform: scale(1.15);
+    }
+  }
+
+  @keyframes unliked {
+    0% {
+      transform: scale(0.8);
+    }
+    100% {
+      transform: scale(0.8);
+      opacity: 0;
+    }
   }
 }
 
@@ -258,3 +300,4 @@ ul, li {
     }
   }
 }
+
