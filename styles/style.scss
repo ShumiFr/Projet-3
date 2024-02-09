@@ -11,6 +11,10 @@ $color-tertiary: #99e2d0;
 
 /*----------- All ---------- */
 
+html, body {
+  scroll-behavior: smooth !important;
+}
+
 body {
   font-family: $font-text;
   margin: 0;

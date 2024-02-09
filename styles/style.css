@@ -1,6 +1,10 @@
 /*----------- Fonts ---------- */
 /*----------- Colors ---------- */
 /*----------- All ---------- */
+html, body {
+  scroll-behavior: smooth !important;
+}
+
 body {
   font-family: "Roboto", sans-serif;
   margin: 0;
