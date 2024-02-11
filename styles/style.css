@@ -203,6 +203,13 @@ li {
   animation-duration: 800ms;
   opacity: 1;
 }
+.card__container .hidden-checkbox:not(:checked) ~ .heart-label .default {
+  transform: scale(1.15);
+  transition: opacity 400ms;
+  animation-name: liked;
+  animation-duration: 800ms;
+  opacity: 1;
+}
 @keyframes liked {
   0% {
     transform: scale(1.15);
@@ -269,6 +276,13 @@ li {
   animation-name: liked;
   animation-duration: 800ms;
   display: block;
+  opacity: 1;
+}
+.restaurant .hidden-checkbox:not(:checked) ~ .heart-label .default {
+  transform: scale(1.15);
+  transition: opacity 400ms;
+  animation-name: liked;
+  animation-duration: 800ms;
   opacity: 1;
 }
 @keyframes liked {
