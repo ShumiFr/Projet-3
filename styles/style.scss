@@ -3,15 +3,30 @@
 $font-LogoTitle: "Shrikhand", serif;
 $font-text: "Roboto", sans-serif;
 
+.title {
+  font-family: $font-LogoTitle;
+  font-weight: 500;
+}
+
 /*----------- Colors ---------- */
 
-$color-primary: #9356dc;
-$color-secondary: #ff79da;
-$color-tertiary: #99e2d0;
+$--primary: #9356dc;
+$--secondary: #ff79da;
+$--tertiary: #99e2d0;
+$--darkgray: darkgray;
+$--dimgray: dimgray;
+$--lightgray: lightgray;
+$--ultralightgray: #eaeaea;
+$--graywhite: #f6f6f6;
+$--lightpurple: #f5edff;
+$--lightgreen: #99e2d0;
+$--green: #2faf94;
+$--grayblack: #353535;
 
 /*----------- All ---------- */
 
-html, body {
+html,
+body {
   scroll-behavior: smooth !important;
 }
 
@@ -19,13 +34,13 @@ body {
   font-family: $font-text;
   margin: 0;
   padding: 0;
-  background: #F6F6F6;
+  background: $--graywhite;
 }
 
 input {
   font-family: $font-text;
   border: none;
-  background-color: #eaeaea;
+  background-color: $--ultralightgray;
   width: 120px;
 
   &:focus {
@@ -33,12 +48,13 @@ input {
   }
 
   &::placeholder {
-    color: #353535;
+    color: $--grayblack;
     font-weight: 600;
   }
 }
 
-ul, li {
+ul,
+li {
   list-style-type: none;
 }
 
@@ -52,7 +68,6 @@ ul, li {
   justify-content: center;
 
   &__logo {
-
     &--mobile {
       position: relative;
       display: flex;
@@ -74,7 +89,7 @@ ul, li {
     justify-content: center;
     width: 100%;
     height: 50px;
-    background-color: #eaeaea;
+    background-color: $--ultralightgray;
     box-shadow: 0px 4px 4px 0px #00000026;
 
     input {
@@ -90,7 +105,7 @@ ul, li {
 
 .article {
   display: flex;
-  flex-direction: column; 
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   text-align: center;
@@ -101,12 +116,16 @@ ul, li {
 
   &__p {
     margin-top: 0;
-    color: #353535;
+    color: $--grayblack;
     font-size: 18px;
   }
 
   &__button {
-    background: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
+    background: linear-gradient(
+      193.33deg,
+      $--primary -11.44%,
+      $--secondary 123.93%
+    );
     border: none;
     color: white;
     padding: 15px 30px;
@@ -126,7 +145,7 @@ ul, li {
   display: flex;
   flex-direction: column;
   width: 100%;
-  background: #FFFFFF;
+  background: white;
 
   h1 {
     padding: 0 15px;
@@ -140,13 +159,13 @@ ul, li {
     margin: 15px 30px;
     padding: 10px 20px;
     border-radius: 20px;
-    background: #F6F6F6;
+    background: $--graywhite;
     box-shadow: 0px 4px 15px 0px #00000026;
 
     i {
       font-size: large;
       margin-right: 20px;
-      color: #7E7E7E;
+      color: $--darkgray;
     }
 
     p {
@@ -157,14 +176,14 @@ ul, li {
       margin-bottom: 50px;
     }
   }
-  
+
   &__number {
     display: flex;
     position: relative;
     align-items: center;
     left: -30px;
     justify-content: center;
-    background: $color-primary;
+    background: $--primary;
     width: 24px;
     height: 24px;
     border-radius: 50%;
@@ -172,9 +191,9 @@ ul, li {
   }
 }
 
-/*----------- Restaurants ---------- */
+/*----------- Index.html / Restaurants ---------- */
 
-.restaurant {
+.restaurants {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -187,7 +206,7 @@ ul, li {
     flex-direction: column;
     justify-content: center;
     width: 90%;
-    background: #FFFFFF;
+    background: white;
     border-radius: 20px;
     margin-bottom: 20px;
     height: 300px;
@@ -247,14 +266,82 @@ ul, li {
   }
 }
 
-.new::before  {
+.new::before {
   content: "Nouveau";
   position: absolute;
-  background: $color-tertiary;
-  color: #008766;
+  background: $--tertiary;
+  color: $--green;
   padding: 5px 10px;
   top: 10px;
   right: 10px;
+}
+
+/*----------- Menu ---------- */
+
+.restaurant {
+  position: absolute;
+  top: 40%;
+  width: 100%;
+  border-radius: 50px;
+  background: $--graywhite;
+
+  &__img {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 285px;
+    overflow: hidden;
+
+    img {
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &__name {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100%;
+  }
+  
+
+  .hidden-checkbox {
+    display: none;
+  }
+
+  .heart-label .liked {
+    display: none;
+    opacity: 0;
+  }
+
+  .hidden-checkbox:checked + .heart-label .default {
+    transition: opacity 400ms;
+    display: none;
+    opacity: 0;
+  }
+
+  .hidden-checkbox:checked + .heart-label .liked {
+    transform: scale(1.15);
+    transition: opacity 400ms;
+    animation-name: liked;
+    animation-duration: 800ms;
+    display: block;
+    opacity: 1;
+  }
+
+  @keyframes liked {
+    0% {
+      transform: scale(1.15);
+    }
+    50% {
+      transform: scale(1.5);
+    }
+    100% {
+      transform: scale(1.15);
+    }
+  }
 }
 
 /*----------- Footer ---------- */
@@ -263,7 +350,7 @@ ul, li {
   position: absolute;
   right: 0px;
   left: 0px;
-  background: #353535;
+  background: $--grayblack;
   color: white;
 
   &__logo {
@@ -273,7 +360,6 @@ ul, li {
   }
 
   &__list {
-    
     li {
       display: flex;
       align-items: center;
@@ -290,4 +376,3 @@ ul, li {
     }
   }
 }
-
