@@ -23,6 +23,9 @@ $--lightgreen: #99e2d0;
 $--green: #2faf94;
 $--grayblack: #353535;
 
+$--darken :10%;
+$--lighten :10%;
+
 /*----------- All ---------- */
 
 html,
@@ -32,8 +35,8 @@ body {
 
 body {
   font-family: $font-text;
-  margin: 0;
-  padding: 0;
+  max-width: 1400px;
+  margin: auto;
   background: $--graywhite;
 }
 
@@ -112,6 +115,11 @@ li {
 
   &__h1 {
     margin-top: 40px;
+
+    @media (min-width: 1024px) {
+      font-weight: 700;
+      font-size: 40px;
+    }
   }
 
   &__p {
@@ -121,11 +129,7 @@ li {
   }
 
   &__button {
-    background: linear-gradient(
-      193.33deg,
-      $--primary -11.44%,
-      $--secondary 123.93%
-    );
+    background: linear-gradient(193.33deg, $--primary -11.44%, $--secondary 123.93%);
     border: none;
     color: white;
     padding: 15px 30px;
@@ -136,21 +140,34 @@ li {
     font-weight: 500;
     border-radius: 25px;
     margin-bottom: 40px;
+    transition: all 0.3s;
+    box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
+
+    &:hover {
+      cursor: pointer;
+      background: linear-gradient(193.33deg, lighten($--primary, $--lighten) -11.44%, lighten($--secondary, $--lighten) 123.93% 40%,);
+    }
   }
 }
 
 /*----------- Fonctionnement ---------- */
 
 .fonctionnement {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
   background: white;
 
   h1 {
     padding: 0 15px;
     font-weight: 600;
     padding-top: 40px;
+
+    @media (min-width: 1024px) {
+      margin-left: 100px;
+    }
+  }
+
+  &__group {
+    display: flex;
+    flex-direction: column;
   }
 
   &__div {
@@ -161,6 +178,10 @@ li {
     border-radius: 20px;
     background: $--graywhite;
     box-shadow: 0px 4px 15px 0px #00000026;
+
+    @media (min-width: 1024px) {
+      padding: 10px 60px;
+    }
 
     i {
       font-size: large;
@@ -174,6 +195,10 @@ li {
 
     &:last-child {
       margin-bottom: 50px;
+
+      @media (min-width: 1024px) {
+        margin-bottom: 15px;
+      }
     }
   }
 
@@ -189,11 +214,29 @@ li {
     border-radius: 50%;
     color: white;
   }
+
+  @media (min-width: 1024px) {
+    .fonctionnement__group {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      padding-bottom: 20px;
+      width: 100%;
+    }
+  }
 }
 
 /*----------- Index.html / Restaurants ---------- */
 
+#restaurants {
+  h1 {
+    margin-left: 20px;
+  }
+}
+
 .restaurants {
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -211,6 +254,16 @@ li {
     margin-bottom: 20px;
     height: 300px;
     overflow: hidden;
+    transition: transform 0.3s ease;
+
+    &:hover {
+      transform: translateY(-5px);
+    }
+  }
+
+  @media (min-width: 1024px) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
   }
 }
 
@@ -372,6 +425,20 @@ li {
     font-family: $font-LogoTitle;
     padding: 20px 0px 0px 40px;
     font-weight: 500;
+
+    @media (min-width: 1024px) {
+      padding: 0 100px;
+    }
+  }
+
+  &__container {
+    @media (min-width: 1024px) {
+      display: flex;
+      flex-direction: row-reverse;
+      align-items: center;
+      justify-content: flex-start;
+      padding-top: 50px;
+    }
   }
 
   &__list {
@@ -380,6 +447,8 @@ li {
       align-items: center;
       height: 20px;
       margin-top: 10px;
+      transition: color 0.2s ease;
+      cursor: pointer;
 
       i {
         padding-right: 10px;
@@ -387,6 +456,24 @@ li {
 
       &:last-child {
         padding-bottom: 20px;
+      }
+
+      &:hover {
+        color: #89C8FA; 
+      }
+    }
+
+    @media (min-width: 1024px) {
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-end;
+
+      li {
+        margin: 0 20px;
+      }
+
+      li:last-child {
+        padding: 0;
       }
     }
   }
