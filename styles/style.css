@@ -96,7 +96,10 @@ li {
   font-size: 18px;
 }
 .article__button {
-  background: linear-gradient(193.33deg, #9356dc -11.44%, #ff79da 123.93%);
+  background: rgb(147, 86, 220);
+  background: linear-gradient(193deg, rgb(147, 86, 220) 0%, rgb(255, 121, 218) 40%, rgb(178, 116, 225) 55%, rgb(231, 133, 225) 100%);
+  background-size: 300%;
+  background-position: right;
   border: none;
   color: white;
   padding: 15px 30px;
@@ -107,12 +110,14 @@ li {
   font-weight: 500;
   border-radius: 25px;
   margin-bottom: 40px;
-  transition: all 0.3s;
   box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
+  transition: all 0.5s;
 }
 .article__button:hover {
   cursor: pointer;
-  background: linear-gradient(193.33deg, #ae80e5 -11.44%, #fface8 123.93% 40%);
+  background-position: left;
+  transform: translateY(-5px);
+  box-shadow: 0px 8px 15px 0px rgba(0, 0, 0, 0.5);
 }
 
 /*----------- Fonctionnement ---------- */
