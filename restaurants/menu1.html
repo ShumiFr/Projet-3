@@ -63,10 +63,25 @@
         <section class="menu__section">
           <div class="menu__list">
             <h2>Entrée</h2>
+            <hr />
+            <input
+              type="checkbox"
+              id="fricasseedescargot"
+              class="hidden-checkbox"
+            />
             <div class="menu__meal">
-              <h3>Fricassée d'escargot</h3>
-              <p>Au piment d'Espelette</p>
-              <p class="price">25€</p>
+              <label for="fricasseedescargot">
+                <span class="menu__title">
+                  <h3>Fricassée d'escargot</h3>
+                  <p>Au piment d'Espelette</p>
+                </span>
+                <span>
+                  <span class="menu__price">25€</span>
+                  <span class="menu__check">
+                    <i class="fa-solid fa-circle-check"></i>
+                  </span>
+                </span>
+              </label>
             </div>
             <div class="menu__meal">
               <h3>Foie gras de canard mi-cuit</h3>
@@ -81,6 +96,7 @@
           </div>
           <div class="menu__list">
             <h2>Plats</h2>
+            <hr />
             <div class="menu__meal">
               <h3>Filet de bœuf aux herbes</h3>
               <p>Accompagné de sa ribambelle de légumes</p>
@@ -99,6 +115,7 @@
           </div>
           <div class="menu__list">
             <h2>Desserts</h2>
+            <hr />
             <div class="menu__meal">
               <h3>Paris-Brest</h3>
               <p>Revisité</p>
@@ -115,6 +132,9 @@
               <p class="price">23€</p>
             </div>
           </div>
+        </section>
+        <section class="article">
+          <button class="article__button">Commander</button>
         </section>
       </article>
     </main>
