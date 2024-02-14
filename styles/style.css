@@ -332,25 +332,23 @@ li {
   width: 100%;
   object-fit: cover;
 }
-.restaurant__name {
-  display: flex;
-  align-items: center;
-  justify-content: space-evenly;
-  width: 100%;
-}
-.restaurant .hidden-checkbox {
+
+.hidden-checkbox {
   display: none;
 }
-.restaurant .heart-label .liked {
+
+.heart-label .liked {
   display: none;
   opacity: 0;
 }
-.restaurant .hidden-checkbox:checked + .heart-label .default {
+
+.hidden-checkbox:checked + .heart-label .default {
   transition: opacity 400ms;
   display: none;
   opacity: 0;
 }
-.restaurant .hidden-checkbox:checked + .heart-label .liked {
+
+.hidden-checkbox:checked + .heart-label .liked {
   transform: scale(1.15);
   transition: opacity 400ms;
   animation-name: liked;
@@ -358,13 +356,15 @@ li {
   display: block;
   opacity: 1;
 }
-.restaurant .hidden-checkbox:not(:checked) ~ .heart-label .default {
-  transform: scale(1.15);
+
+.hidden-checkbox:not(:checked) ~ .heart-label .default {
+  transform: scale(1.1);
   transition: opacity 400ms;
   animation-name: liked;
   animation-duration: 800ms;
   opacity: 1;
 }
+
 @keyframes liked {
   0% {
     transform: scale(1.15);
@@ -376,46 +376,7 @@ li {
     transform: scale(1.15);
   }
 }
-
-.menu__list hr {
-  border-top: 3px solid #99e2d0;
-  width: 50px;
-  position: absolute;
-  top: 120px;
-  left: 20px;
-}
-.menu__list h2 {
-  margin-left: 20px;
-}
-.menu__meal {
-  position: relative;
-  background: white;
-  border-radius: 15px;
-  box-shadow: 0px 4.011px 15.043px 0px rgba(0, 0, 0, 0.1);
-  margin: 15px;
-  overflow: hidden;
-}
-.menu__title h3 {
-  font-size: 18px;
-  margin: 0;
-  padding: 15px 0 0 15px;
-}
-.menu__title p {
-  margin: 0;
-  padding: 5px 0 15px 15px;
-}
-.menu__price {
-  position: absolute;
-  right: 10px;
-  top: 40%;
-}
-.menu__check {
-  position: absolute;
-  background: #99e2d0;
-  right: 20px;
-  top: 40%;
-}
-
+/*----------- Menu -------------*/
 /*----------- Footer ---------- */
 .footer {
   position: absolute;
@@ -553,6 +514,53 @@ li {
     transform: translateY(20px);
     display: none;
   }
+}
+/*----------------------- */
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.menu__container {
+  position: relative;
+  background: #f6f6f6;
+  max-width: 1000px;
+  width: 100%;
+  padding-top: 100px;
+}
+.menu__container h1 {
+  font-family: "Shrikhand", serif;
+  font-weight: 500;
+  font-size: 28px;
+}
+
+.menu__header {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f6f6f6;
+  border-radius: 50px;
+  top: -40px;
+  width: 100%;
+}
+.menu__header .heart-label {
+  position: absolute;
+  right: 10%;
+}
+
+.category__meal {
+  background: white;
+  border-radius: 20px;
+  padding: 10px;
+  display: block; /* Make the element a block so that it takes up the full width */
+}
+
+.hidden-checkbox:checked ~ .category__meal {
+  background: #2faf94;
+  color: white;
 }
 
 /*# sourceMappingURL=style.css.map */

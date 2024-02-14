@@ -24,7 +24,7 @@
         <img src="/assets/logo/ohmyfood@2x.svg" alt="Logo" />
       </div>
       <div class="header__logo--desktop">
-        <img src="/assets/logo/ohmyfood.png" alt="Logo" />
+        <img src="assets/logo/ohmyfood.png" alt="Logo" />
       </div>
     </header>
     <!-- Main -->
@@ -32,107 +32,56 @@
       <!--------- Image Restaurants --------->
       <article class="restaurant__img">
         <img
-          src="/assets/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg"
+          src="../assets/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg"
           alt="Photo du restaurant"
         />
       </article>
       <!--------- Menu Restaurants --------->
-      <article class="restaurant">
-        <div class="restaurant__name">
-          <h1 class="title">La palette du goût</h1>
-          <div class="restaurant__like">
-            <input
-              type="checkbox"
-              id="heartCheckbox1"
-              class="hidden-checkbox"
+
+      <article class="menu__container">
+        <div class="menu__header">
+          <h1 class="restaurant__name">La palette du goût</h1>
+          <input type="checkbox" id="heartCheckbox1" class="hidden-checkbox" />
+          <label for="heartCheckbox1" class="heart-label">
+            <img
+              class="card__heart default"
+              src="../assets/like/Default.svg"
+              alt="Coeur"
             />
-            <label for="heartCheckbox1" class="heart-label">
-              <img
-                class="card__heart default"
-                src="/assets/like/Default.svg"
-                alt="Coeur"
-              />
-              <img
-                class="card__heart liked"
-                src="/assets/like/Liked.svg"
-                alt="Coeur"
-              />
-            </label>
-          </div>
+            <img
+              class="card__heart liked"
+              src="../assets/like/Liked.svg"
+              alt="Coeur"
+            />
+          </label>
         </div>
-        <section class="menu__section">
-          <div class="menu__list">
-            <h2>Entrée</h2>
-            <hr />
-            <input
-              type="checkbox"
-              id="fricasseedescargot"
-              class="hidden-checkbox"
-            />
-            <div class="menu__meal">
-              <label for="fricasseedescargot">
-                <span class="menu__title">
-                  <h3>Fricassée d'escargot</h3>
+        <div class="menu__content">
+          <div class="menu__category">
+            <div>
+              <h2>Entrée</h2>
+            </div>
+            <div class="category__meal">
+              <input type="checkbox" class="hidden-checkbox" id="starter1" />
+              <label for="starter1" class="meal__category">
+                <div class="meal__title">
+                  <h3>Fricassée d'escargots</h3>
                   <p>Au piment d'Espelette</p>
-                </span>
-                <span>
-                  <span class="menu__price">25€</span>
-                  <span class="menu__check">
-                    <i class="fa-solid fa-circle-check"></i>
-                  </span>
-                </span>
+                </div>
+                <div class="meal__price">
+                  <p>25€</p>
+                </div>
+                <div class="meal__check">
+                  <i class="fa-solid fa-circle-check"></i>
+                </div>
               </label>
             </div>
-            <div class="menu__meal">
-              <h3>Foie gras de canard mi-cuit</h3>
-              <p>Et ses copeaux de truffe noire</p>
-              <p class="price">35€</p>
-            </div>
-            <div class="menu__meal">
-              <h3>Œuf au plat</h3>
-              <p>Assaisonné à la truffe sur lit de caviar</p>
-              <p class="price">20€</p>
-            </div>
           </div>
-          <div class="menu__list">
-            <h2>Plats</h2>
-            <hr />
-            <div class="menu__meal">
-              <h3>Filet de bœuf aux herbes</h3>
-              <p>Accompagné de sa ribambelle de légumes</p>
-              <p class="price">40€</p>
-            </div>
-            <div class="menu__meal">
-              <h3>Parmentier de queue de bœuf</h3>
-              <p>À la truffe noire sur sa purée de panais</p>
-              <p class="price">35€</p>
-            </div>
-            <div class="menu__meal">
-              <h3>Filet de turbot</h3>
-              <p>Aux agrumes</p>
-              <p class="price">44€</p>
-            </div>
-          </div>
-          <div class="menu__list">
-            <h2>Desserts</h2>
-            <hr />
-            <div class="menu__meal">
-              <h3>Paris-Brest</h3>
-              <p>Revisité</p>
-              <p class="price">18€</p>
-            </div>
-            <div class="menu__meal">
-              <h3>Macaron au chocolat d'exception</h3>
-              <p>Et glace à la vanille de Madagascar</p>
-              <p class="price">22€</p>
-            </div>
-            <div class="menu__meal">
-              <h3>Mousse au chocolat</h3>
-              <p>Au piment d'Espelette et à la truffe noire</p>
-              <p class="price">23€</p>
-            </div>
-          </div>
-        </section>
+          <div class="menu__category"></div>
+          <div class="menu__category"></div>
+        </div>
+
+        <!--------- Bouton -------------->
+
         <section class="article">
           <button class="article__button">Commander</button>
         </section>

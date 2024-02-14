@@ -385,15 +385,9 @@ li {
       object-fit: cover;
     }
   }
+}
 
-  &__name {
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
-    width: 100%;
-  }
-  
-  .hidden-checkbox {
+.hidden-checkbox {
     display: none;
   }
 
@@ -418,7 +412,7 @@ li {
   }
 
   .hidden-checkbox:not(:checked) ~ .heart-label .default {
-    transform: scale(1.15);
+    transform: scale(1.10);
     transition: opacity 400ms;
     animation-name: liked;
     animation-duration: 800ms;
@@ -436,61 +430,8 @@ li {
       transform: scale(1.15);
     }
   }
-}
 
-.menu {
-
-  &__list{
-
-    hr {
-      border-top: 3px solid $--tertiary;
-      width: 50px;
-      position: absolute;
-      top: 120px;
-      left: 20px;
-    }
-
-    h2{
-      margin-left: 20px;
-    }
-  } 
-
-  &__meal {
-    position: relative;
-    background: white;
-    border-radius: 15px;
-    box-shadow: 0px 4.011px 15.043px 0px rgba(0, 0, 0, 0.10);
-    margin: 15px;
-    overflow: hidden;
-  }
-
-  &__title {
-  
-    h3  {
-      font-size: 18px;
-      margin: 0;
-      padding: 15px 0 0 15px;
-    }
-
-    p {
-      margin: 0;
-      padding: 5px 0 15px 15px;
-    }
-  }
-
-  &__price {
-    position: absolute;
-    right: 10px;
-    top: 40%;
-  }
-
-  &__check {
-    position: absolute;
-    background: $--tertiary;
-    right: 20px;
-    top: 40%;
-  }
-}
+/*----------- Menu -------------*/
 
 /*----------- Footer ---------- */
 
@@ -626,4 +567,56 @@ li {
     transform: translateY(20px);
     display: none;
   }
+}
+
+
+/*----------------------- */
+
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.menu__container {
+  position: relative;
+  background: $--graywhite;
+  max-width: 1000px;
+  width: 100%;
+  padding-top: 100px;
+
+  h1 {
+    font-family: $font-LogoTitle;
+    font-weight: 500;
+    font-size: 28px;
+  }
+}
+
+.menu__header {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: $--graywhite;
+  border-radius: 50px;
+  top: -40px;
+  width: 100%;
+
+  .heart-label {
+    position: absolute;
+    right: 10%;
+  }
+}
+
+.category__meal {
+  background: white;
+  border-radius: 20px;
+  padding: 10px;
+  display: block; /* Make the element a block so that it takes up the full width */
+}
+
+.hidden-checkbox:checked ~ .category__meal {
+  background: #2faf94;
+  color: white;
 }
