@@ -432,8 +432,6 @@ li {
     }
   }
 
-/*----------- Menu -------------*/
-
 /*----------- Footer ---------- */
 
 .footer {
@@ -596,16 +594,11 @@ li {
   position: absolute;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-around;
   background: $--graywhite;
   border-radius: 50px;
   top: -40px;
   width: 100%;
-
-  .heart-label {
-    position: absolute;
-    right: 10%;
-  }
 }
 
 .meal__list {

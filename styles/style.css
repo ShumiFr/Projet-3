@@ -378,7 +378,6 @@ li {
     transform: scale(1.15);
   }
 }
-/*----------- Menu -------------*/
 /*----------- Footer ---------- */
 .footer {
   width: 100%;
@@ -540,15 +539,11 @@ li {
   position: absolute;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-around;
   background: #f6f6f6;
   border-radius: 50px;
   top: -40px;
   width: 100%;
-}
-.menu__header .heart-label {
-  position: absolute;
-  right: 10%;
 }
 
 .meal__list {
