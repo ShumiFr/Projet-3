@@ -142,6 +142,7 @@ li {
     font-size: 16px;
     font-weight: 500;
     border-radius: 25px;
+    margin-top: 20px;
     margin-bottom: 40px;
     box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
     transition: all 0.3s;
@@ -436,9 +437,7 @@ li {
 /*----------- Footer ---------- */
 
 .footer {
-  position: absolute;
-  right: 0px;
-  left: 0px;
+  width: 100%;
   background: $--grayblack;
   color: white;
 
@@ -609,14 +608,79 @@ li {
   }
 }
 
-.category__meal {
-  background: white;
-  border-radius: 20px;
-  padding: 10px;
-  display: block; /* Make the element a block so that it takes up the full width */
+.meal__list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
-.hidden-checkbox:checked ~ .category__meal {
-  background: #2faf94;
-  color: white;
+.meal {
+  background: white;
+  width: 95%;
+  border-radius: 20px;
+  box-shadow: 0px 4.011px 15.043px 0px rgba(0, 0, 0, 0.10);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin-bottom: 10px;
+}
+
+.hidden-checkbox:checked ~ .meal__label .meal__check {
+  transition: all 0.5s;
+  transform: translate(0px);
+}
+
+.meal__label {
+  display: flex;
+  align-items: center;
+
+  h3, p {
+    margin: 0;
+    padding-left: 15px;
+  }
+
+  h3 {
+    padding-bottom: 10px;
+  }
+}
+
+.meal__price {
+  align-self: flex-end;
+  padding-bottom: 20px;
+  width: 5%;
+}
+
+.meal__check {
+  padding: 30px;
+  background: $--tertiary;
+  transform: translate(150px);
+}
+
+.menu__title {
+  display: flex;
+  align-items: center;
+  padding-left: 20px;
+
+  h2 {
+    font-weight: 300;
+    text-transform: uppercase;
+    position: relative; /* Assurez-vous que le positionnement est relatif pour les éléments ::before et ::after */
+
+    &::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -5px; /* Ajustez la distance de la ligne par rapport au texte */
+      width: 50%; /* Ajustez la largeur de la ligne en fonction de la largeur du titre */
+      border-bottom: 3px solid $--tertiary; /* Ajoutez un trait en dessous du titre */
+    }
+  }
+}
+
+
+.meal__title {
+  width: 95%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
