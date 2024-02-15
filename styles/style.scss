@@ -142,6 +142,7 @@ li {
     font-size: 16px;
     font-weight: 500;
     border-radius: 25px;
+    margin-top: 20px;
     margin-bottom: 40px;
     box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
     transition: all 0.3s;
@@ -385,15 +386,9 @@ li {
       object-fit: cover;
     }
   }
+}
 
-  &__name {
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
-    width: 100%;
-  }
-  
-  .hidden-checkbox {
+.hidden-checkbox {
     display: none;
   }
 
@@ -418,7 +413,7 @@ li {
   }
 
   .hidden-checkbox:not(:checked) ~ .heart-label .default {
-    transform: scale(1.15);
+    transform: scale(1.10);
     transition: opacity 400ms;
     animation-name: liked;
     animation-duration: 800ms;
@@ -436,68 +431,11 @@ li {
       transform: scale(1.15);
     }
   }
-}
-
-.menu {
-
-  &__list{
-
-    hr {
-      border-top: 3px solid $--tertiary;
-      width: 50px;
-      position: absolute;
-      top: 120px;
-      left: 20px;
-    }
-
-    h2{
-      margin-left: 20px;
-    }
-  } 
-
-  &__meal {
-    position: relative;
-    background: white;
-    border-radius: 15px;
-    box-shadow: 0px 4.011px 15.043px 0px rgba(0, 0, 0, 0.10);
-    margin: 15px;
-    overflow: hidden;
-  }
-
-  &__title {
-  
-    h3  {
-      font-size: 18px;
-      margin: 0;
-      padding: 15px 0 0 15px;
-    }
-
-    p {
-      margin: 0;
-      padding: 5px 0 15px 15px;
-    }
-  }
-
-  &__price {
-    position: absolute;
-    right: 10px;
-    top: 40%;
-  }
-
-  &__check {
-    position: absolute;
-    background: $--tertiary;
-    right: 20px;
-    top: 40%;
-  }
-}
 
 /*----------- Footer ---------- */
 
 .footer {
-  position: absolute;
-  right: 0px;
-  left: 0px;
+  width: 100%;
   background: $--grayblack;
   color: white;
 
@@ -626,4 +564,116 @@ li {
     transform: translateY(20px);
     display: none;
   }
+}
+
+
+/*----------------------- */
+
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.menu__container {
+  position: relative;
+  background: $--graywhite;
+  max-width: 1000px;
+  width: 100%;
+  padding-top: 100px;
+
+  h1 {
+    font-family: $font-LogoTitle;
+    font-weight: 500;
+    font-size: 28px;
+  }
+}
+
+.menu__header {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  background: $--graywhite;
+  border-radius: 50px;
+  top: -40px;
+  width: 100%;
+}
+
+.meal__list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.meal {
+  background: white;
+  width: 95%;
+  border-radius: 20px;
+  box-shadow: 0px 4.011px 15.043px 0px rgba(0, 0, 0, 0.10);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin-bottom: 10px;
+}
+
+.hidden-checkbox:checked ~ .meal__label .meal__check {
+  transition: all 0.5s;
+  transform: translate(0px);
+}
+
+.meal__label {
+  display: flex;
+  align-items: center;
+
+  h3, p {
+    margin: 0;
+    padding-left: 15px;
+  }
+
+  h3 {
+    padding-bottom: 10px;
+  }
+}
+
+.meal__price {
+  align-self: flex-end;
+  padding-bottom: 20px;
+  width: 5%;
+}
+
+.meal__check {
+  padding: 30px;
+  background: $--tertiary;
+  transform: translate(150px);
+}
+
+.menu__title {
+  display: flex;
+  align-items: center;
+  padding-left: 20px;
+
+  h2 {
+    font-weight: 300;
+    text-transform: uppercase;
+    position: relative; /* Assurez-vous que le positionnement est relatif pour les éléments ::before et ::after */
+
+    &::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -5px; /* Ajustez la distance de la ligne par rapport au texte */
+      width: 50%; /* Ajustez la largeur de la ligne en fonction de la largeur du titre */
+      border-bottom: 3px solid $--tertiary; /* Ajoutez un trait en dessous du titre */
+    }
+  }
+}
+
+
+.meal__title {
+  width: 95%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
