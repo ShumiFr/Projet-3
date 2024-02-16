@@ -38,6 +38,11 @@ li {
   list-style-type: none;
 }
 
+a {
+  text-decoration: none;
+  color: black;
+}
+
 /*----------- Header ---------- */
 .header {
   display: flex;
