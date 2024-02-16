@@ -133,7 +133,14 @@ li {
 }
 .article__button {
   background: rgb(147, 86, 220);
-  background: linear-gradient(193deg, rgb(147, 86, 220) 0%, rgb(244, 118, 218) 27%, rgb(255, 121, 218) 30%, rgb(255, 172, 232) 70%, rgb(174, 128, 229) 100%);
+  background: linear-gradient(
+    193deg,
+    rgb(147, 86, 220) 0%,
+    rgb(244, 118, 218) 27%,
+    rgb(255, 121, 218) 30%,
+    rgb(255, 172, 232) 70%,
+    rgb(174, 128, 229) 100%
+  );
   background-size: 300%;
   background-position: right;
   border: none;
