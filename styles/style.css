@@ -111,17 +111,17 @@ li {
   justify-content: center;
   text-align: center;
 }
-.article__h1 {
+.article__h2 {
   margin-top: 40px;
 }
 @media (min-width: 1025px) {
-  .article__h1 {
+  .article__h2 {
     font-weight: 700;
     font-size: 40px;
   }
 }
 @media (min-width: 768px) and (max-width: 1024px) {
-  .article__h1 {
+  .article__h2 {
     font-weight: 700;
     font-size: 40px;
   }
@@ -133,14 +133,7 @@ li {
 }
 .article__button {
   background: rgb(147, 86, 220);
-  background: linear-gradient(
-    193deg,
-    rgb(147, 86, 220) 0%,
-    rgb(244, 118, 218) 27%,
-    rgb(255, 121, 218) 30%,
-    rgb(255, 172, 232) 70%,
-    rgb(174, 128, 229) 100%
-  );
+  background: linear-gradient(193deg, rgb(147, 86, 220) 0%, rgb(244, 118, 218) 27%, rgb(255, 121, 218) 30%, rgb(255, 172, 232) 70%, rgb(174, 128, 229) 100%);
   background-size: 300%;
   background-position: right;
   border: none;
@@ -169,18 +162,18 @@ li {
 .fonctionnement {
   background: white;
 }
-.fonctionnement h1 {
+.fonctionnement h2 {
   padding: 0 15px;
   font-weight: 600;
   padding-top: 40px;
 }
 @media (min-width: 1025px) {
-  .fonctionnement h1 {
+  .fonctionnement h2 {
     margin-left: 50px;
   }
 }
 @media (min-width: 768px) and (max-width: 1024px) {
-  .fonctionnement h1 {
+  .fonctionnement h2 {
     margin-left: 50px;
   }
 }
@@ -286,16 +279,16 @@ li {
 }
 
 /*----------- Index.html / Restaurants ---------- */
-#restaurants h1 {
+#restaurants h2 {
   margin-left: 20px;
 }
 @media (min-width: 1025px) {
-  #restaurants h1 {
+  #restaurants h2 {
     margin-left: 50px;
   }
 }
 @media (min-width: 768px) and (max-width: 1024px) {
-  #restaurants h1 {
+  #restaurants h2 {
     margin-left: 50px;
   }
 }
@@ -663,7 +656,7 @@ li {
   width: 100%;
   padding-top: 50px;
 }
-.menu__container h1 {
+.menu__container h2 {
   font-family: "Shrikhand", serif;
   font-weight: 500;
   font-size: 24px;
