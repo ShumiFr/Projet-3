@@ -188,7 +188,7 @@ li {
     font-weight: 500;
     border-radius: 25px;
     margin-top: 20px;
-    margin-bottom: 40px;
+    margin-bottom: 20px;
     box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
     transition: all 0.3s;
 
@@ -715,6 +715,7 @@ li {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  background: white;
 }
 
 .menu__container {
@@ -763,7 +764,7 @@ li {
   align-items: center;
   padding-left: 20px;
 
-  h2 {
+  h3 {
     font-weight: 300;
     text-transform: uppercase;
     position: relative; /* Assurez-vous que le positionnement est relatif pour les éléments ::before et ::after */
@@ -840,11 +841,13 @@ li {
   text-overflow: ellipsis;
   width: 90%;
 
-  h3 {
+  .h4 {
+    font-weight: 700;
+    font-size: 18px;
     padding: 15px 0 5px 15px;
   }
 
-  p {
+  .p {
     padding: 5px 0 15px 15px;
   }
 }
@@ -853,6 +856,7 @@ li {
   margin-right: 20px;
   display: flex;
   align-self: flex-end;
+  padding-bottom: 20px;
 }
 
 .meal__check {
@@ -860,7 +864,7 @@ li {
   justify-content: center;
   align-items: center;
   width: 60px;
-  margin-right: -60px;
+  margin-right: -65px;
   transition: all 0.3s;
   background: $--tertiary;
   color: white;
