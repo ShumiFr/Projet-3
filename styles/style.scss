@@ -202,12 +202,11 @@ li {
 
     @media (min-width: 426px) and (max-width: 768px) {
       align-items: center;
-      
+
       .fonctionnement__div {
         width: 80%;
       }
-
-      }
+    }
   }
 
   &__div {
@@ -269,7 +268,6 @@ li {
   }
 
   @media (min-width: 1025px) {
-
     .fonctionnement__group {
       display: flex;
       flex-direction: row;
@@ -289,8 +287,7 @@ li {
     }
   }
 
-   @media (min-width: 768px) and (max-width: 1024px){
-
+  @media (min-width: 768px) and (max-width: 1024px) {
     .fonctionnement__div {
       padding-left: 20px;
     }
@@ -728,56 +725,6 @@ li {
   }
 }
 
-.meal__list {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-
-.meal {
-  background: white;
-  width: 95%;
-  border-radius: 20px;
-  box-shadow: 0px 4.011px 15.043px 0px rgba(0, 0, 0, 0.1);
-  overflow: hidden;
-  text-overflow: ellipsis;
-  margin-bottom: 10px;
-}
-
-.hidden-checkbox:checked ~ .meal__label .meal__check {
-  transition: all 0.5s;
-  transform: translate(0px);
-}
-
-.meal__label {
-  display: flex;
-  align-items: center;
-
-  h3,
-  p {
-    margin: 0;
-    padding-left: 15px;
-  }
-
-  h3 {
-    padding-bottom: 10px;
-  }
-}
-
-.meal__price {
-  align-self: flex-end;
-  padding-bottom: 20px;
-  width: 5%;
-}
-
-.meal__check {
-  padding: 30px;
-  background: $--tertiary;
-  color: white;
-  transform: translate(150px);
-}
-
 .menu__title {
   display: flex;
   align-items: center;
@@ -799,16 +746,6 @@ li {
   }
 }
 
-.meal__title {
-  width: 80%;
-}
-
-.meal__text {
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-
 .menu__content {
   display: flex;
   flex-direction: column;
@@ -827,4 +764,77 @@ li {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+.meal__list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  padding: 20px 0;
+}
+
+.app {
+    width: 90%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.meal {
+  display: flex;
+  justify-content: space-between;
+  background: white;
+  border-radius: 15px;
+  overflow: hidden; 
+}
+
+.meal__label {
+  width: 90%;
+}
+
+.meal-text {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin: 0;
+}
+
+.meal__title {
+  display: flex;
+  flex-direction: column;
+  white-space: nowrap;
+  overflow-x: hidden;
+  text-overflow: ellipsis;
+  width: 90%;
+
+  h3 {
+    padding: 15px 0 5px 15px;
+  }
+
+  p {
+    padding: 5px 0 15px 15px;
+  }
+}
+
+.meal__price {
+  margin-right: 20px;
+  display: flex;
+  align-self: flex-end;
+}
+
+.meal__check {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 60px;
+  margin-right: -60px;
+  transition: all 0.3s;
+  background: $--tertiary;
+  color: white;
+  font-size: 18px;
+}
+
+.hidden-checkbox:checked ~ .meal__label .meal__check {
+  transition: all 0.3s;
+  margin-right: 0;
 }
