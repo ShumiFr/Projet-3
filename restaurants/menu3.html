@@ -1,18 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Menu - La note enchantée</title>
-    <link rel="stylesheet" href="../styles/style.css" />
-    <!--------- Fonts --------->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="../styles/style.css">
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
       href="https://fonts.googleapis.com/css2?family=Roboto&family=Shrikhand&display=swap"
       rel="stylesheet"
-    />
-    <!--------- Icons --------->
+    >
+    <!-- Icons -->
     <script
       src="https://kit.fontawesome.com/6983cb12c1.js"
       crossorigin="anonymous"
@@ -22,243 +22,236 @@
     <header class="header">
       <a href="../index.html"><i class="fa-solid fa-arrow-left"></i></a>
       <div class="header__logo--mobile">
-        <img src="../assets/logo/ohmyfood@2x.svg" alt="Logo" />
+        <img src="../assets/logo/ohmyfood@2x.svg" alt="Logo">
       </div>
       <div class="header__logo--desktop">
-        <img src="../assets/logo/ohmyfood.png" alt="Logo" />
+        <img src="../assets/logo/ohmyfood.png" alt="Logo">
       </div>
     </header>
     <!-- Main -->
     <main class="main">
-      <!--------- Image Restaurants --------->
-      <article class="restaurant__img">
+      <!-- Image Restaurants -->
+      <div class="restaurant__img">
         <img
           src="../assets/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg"
           alt="Photo du restaurant"
-        />
-      </article>
-      <!--------- Menu Restaurants --------->
-
+        >
+      </div>
+      <!-- Menu Restaurants -->
       <article class="menu__container">
         <div class="menu__header">
-          <h1 class="restaurant__name">La note enchantée</h1>
-          <input type="checkbox" id="heartCheckbox1" class="hidden-checkbox" />
+          <h2 class="restaurant__name">La note enchantée</h2>
+          <input type="checkbox" id="heartCheckbox1" class="hidden-checkbox">
           <label for="heartCheckbox1" class="heart-label">
             <img
               class="card__heart default"
               src="../assets/like/Default.svg"
               alt="Coeur"
-            />
+            >
             <img
               class="card__heart liked"
               src="../assets/like/Liked.svg"
               alt="Coeur"
-            />
+            >
           </label>
         </div>
         <div class="menu__content">
           <div class="menu__category">
             <div class="menu__title">
-              <h2>Entrées</h2>
+              <h3>Entrées</h3>
             </div>
             <div class="meal__list">
               <div class="app">
-                <input type="checkbox" class="hidden-checkbox" id="meal1" />
+                <input type="checkbox" class="hidden-checkbox" id="meal1">
                 <label for="meal1" class="meal__label">
-                  <div class="meal">
-                    <div class="meal__title">
-                      <h3 class="meal-text">Ravioles de foie gras</h3>
-                      <p class="meal-text">
-                        Accompagnées de leur crème à la truffe
-                      </p>
-                    </div>
-                    <div class="meal__price">
-                      <p>25€</p>
-                    </div>
-                    <div class="meal__check">
+                  <span class="meal">
+                    <span class="meal__title">
+                      <span class="meal-text h4">Ravioles de foie gras </span>
+                      <span class="meal-text p">Accompagnées de leur crème à la truffe</span>
+                    </span>
+                    <span class="meal__price"> 25€ </span>
+                    <span class="meal__check">
                       <i class="fa-solid fa-circle-check"></i>
-                    </div>
-                  </div>
+                    </span>
+                  </span>
                 </label>
               </div>
               <div class="app">
-                <input type="checkbox" class="hidden-checkbox" id="meal2" />
+                <input type="checkbox" class="hidden-checkbox" id="meal2">
                 <label for="meal2" class="meal__label">
-                  <div class="meal">
-                    <div class="meal__title">
-                      <h3 class="meal-text">Caviar osciètre</h3>
-                      <p class="meal-text">Sur blini à la farine de blé noir</p>
-                    </div>
-                    <div class="meal__price">
-                      <p>35€</p>
-                    </div>
-                    <div class="meal__check">
+                  <span class="meal">
+                    <span class="meal__title">
+                      <span class="meal-text h4"
+                        >Caviar osciètre </span
+                      >
+                      <span class="meal-text p"
+                        >Sur blini à la farine de blé noir</span
+                      >
+                    </span>
+                    <span class="meal__price"> 35€ </span>
+                    <span class="meal__check">
                       <i class="fa-solid fa-circle-check"></i>
-                    </div>
-                  </div>
+                    </span>
+                  </span>
                 </label>
               </div>
               <div class="app">
-                <input type="checkbox" class="hidden-checkbox" id="meal3" />
+                <input type="checkbox" class="hidden-checkbox" id="meal3">
                 <label for="meal3" class="meal__label">
-                  <div class="meal">
-                    <div class="meal__title">
-                      <h3 class="meal-text">Homard et espuma de potiron</h3>
-                      <p class="meal-text">Marinés aux zestes d'orange</p>
-                    </div>
-                    <div class="meal__price">
-                      <p>20€</p>
-                    </div>
-                    <div class="meal__check">
+                  <span class="meal">
+                    <span class="meal__title">
+                      <span class="meal-text h4">Homard et espuma de potiron</span>
+                      <span class="meal-text p">
+                        Marinés aux zestes d'orange
+                      </span>
+                    </span>
+                    <span class="meal__price"> 20€ </span>
+                    <span class="meal__check">
                       <i class="fa-solid fa-circle-check"></i>
-                    </div>
-                  </div>
+                    </span>
+                  </span>
                 </label>
               </div>
               <div class="app">
-                <input type="checkbox" class="hidden-checkbox" id="meal10" />
+                <input type="checkbox" class="hidden-checkbox" id="meal10">
                 <label for="meal10" class="meal__label">
-                  <div class="meal">
-                    <div class="meal__title">
-                      <h3 class="meal-text">Foie gras de canard cuit entier</h3>
-                      <p class="meal-text">Confiture de figue et pain toasté</p>
-                    </div>
-                    <div class="meal__price">
-                      <p>35€</p>
-                    </div>
-                    <div class="meal__check">
+                  <span class="meal">
+                    <span class="meal__title">
+                      <span class="meal-text h4">Foie gras de canard cuit entier</span>
+                      <span class="meal-text p">
+                        Confiture de figue et pain toasté
+                      </span>
+                    </span>
+                    <span class="meal__price"> 35€ </span>
+                    <span class="meal__check">
                       <i class="fa-solid fa-circle-check"></i>
-                    </div>
-                  </div>
+                    </span>
+                  </span>
                 </label>
               </div>
             </div>
           </div>
           <div class="menu__category">
             <div class="menu__title">
-              <h2>Plats</h2>
+              <h3>Plats</h3>
             </div>
             <div class="meal__list">
               <div class="app">
-                <input type="checkbox" class="hidden-checkbox" id="meal4" />
+                <input type="checkbox" class="hidden-checkbox" id="meal4">
                 <label for="meal4" class="meal__label">
-                  <div class="meal">
-                    <div class="meal__title">
-                      <h3 class="meal-text">Noix de coquilles Saint-Jacques</h3>
-                      <p class="meal-text">Sur lit de purée de céleri-rave</p>
-                    </div>
-                    <div class="meal__price">
-                      <p>40€</p>
-                    </div>
-                    <div class="meal__check">
+                  <span class="meal">
+                    <span class="meal__title">
+                      <span class="meal-text h4">Noix de coquilles Saint-Jacques</span>
+                      <span class="meal-text p">
+                        Sur lit de purée de céleri-rave
+                      </span>
+                    </span>
+                    <span class="meal__price"> 40€ </span>
+                    <span class="meal__check">
                       <i class="fa-solid fa-circle-check"></i>
-                    </div>
-                  </div>
+                    </span>
+                  </span>
                 </label>
               </div>
               <div class="app">
-                <input type="checkbox" class="hidden-checkbox" id="meal5" />
+                <input type="checkbox" class="hidden-checkbox" id="meal5">
                 <label for="meal5" class="meal__label">
-                  <div class="meal">
-                    <div class="meal__title">
-                      <h3 class="meal-text">Langoustine poêlée</h3>
-                      <p class="meal-text">Purée de patate douce</p>
-                    </div>
-                    <div class="meal__price">
-                      <p>35€</p>
-                    </div>
-                    <div class="meal__check">
+                  <span class="meal">
+                    <span class="meal__title">
+                      <span class="meal-text h4"
+                        >Langoustine poêlée</span
+                      >
+                      <span class="meal-text p">
+                        Purée de patate douce
+                      </span>
+                    </span>
+                    <span class="meal__price"> 35€ </span>
+                    <span class="meal__check">
                       <i class="fa-solid fa-circle-check"></i>
-                    </div>
-                  </div>
+                    </span>
+                  </span>
                 </label>
               </div>
               <div class="app">
-                <input type="checkbox" class="hidden-checkbox" id="meal6" />
+                <input type="checkbox" class="hidden-checkbox" id="meal6">
                 <label for="meal6" class="meal__label">
-                  <div class="meal">
-                    <div class="meal__title">
-                      <h3 class="meal-text">Mijoté de queue de bœuf</h3>
-                      <p class="meal-text">
-                        Et riz sauvage aux zestes de citron
-                      </p>
-                    </div>
-                    <div class="meal__price">
-                      <p>45€</p>
-                    </div>
-                    <div class="meal__check">
+                  <span class="meal">
+                    <span class="meal__title">
+                      <span class="meal-text h4">Mijoté de queue de bœuf </span>
+                      <span class="meal-text p">Et riz sauvage aux zestes de citron</span>
+                    </span>
+                    <span class="meal__price"> 45€ </span>
+                    <span class="meal__check">
                       <i class="fa-solid fa-circle-check"></i>
-                    </div>
-                  </div>
+                    </span>
+                  </span>
                 </label>
               </div>
             </div>
           </div>
           <div class="menu__category">
             <div class="menu__title">
-              <h2>Desserts</h2>
+              <h3>Desserts</h3>
             </div>
             <div class="meal__list">
               <div class="app">
-                <input type="checkbox" class="hidden-checkbox" id="meal7" />
+                <input type="checkbox" class="hidden-checkbox" id="meal7">
                 <label for="meal7" class="meal__label">
-                  <div class="meal">
-                    <div class="meal__title">
-                      <h3 class="meal-text">Macaron noisette et chocolat</h3>
-                      <p class="meal-text">
-                        Glace au caramel brun et sel de Guérande
-                      </p>
-                    </div>
-                    <div class="meal__price">
-                      <p>18€</p>
-                    </div>
-                    <div class="meal__check">
+                  <span class="meal">
+                    <span class="meal__title">
+                      <span class="meal-text h4">Macaron noisette et chocolat</span>
+                      <span class="meal-text p">Glace au caramel brun et sel de Guérande</span>
+                    </span>
+                    <span class="meal__price"> 18€ </span>
+                    <span class="meal__check">
                       <i class="fa-solid fa-circle-check"></i>
-                    </div>
-                  </div>
+                    </span>
+                  </span>
                 </label>
               </div>
               <div class="app">
-                <input type="checkbox" class="hidden-checkbox" id="meal8" />
+                <input type="checkbox" class="hidden-checkbox" id="meal8">
                 <label for="meal8" class="meal__label">
-                  <div class="meal">
-                    <div class="meal__title">
-                      <h3 class="meal-text">Baba au rhum revisité</h3>
-                      <p class="meal-text">Avec son coulis de citron</p>
-                    </div>
-                    <div class="meal__price">
-                      <p>22€</p>
-                    </div>
-                    <div class="meal__check">
+                  <span class="meal">
+                    <span class="meal__title">
+                      <span class="meal-text h4"
+                        >Baba au rhum revisité </span
+                      >
+                      <span class="meal-text p">
+                        Avec son coulis de citron
+                      </span>
+                    </span>
+                    <span class="meal__price"> 22€ </span>
+                    <span class="meal__check">
                       <i class="fa-solid fa-circle-check"></i>
-                    </div>
-                  </div>
+                    </span>
+                  </span>
                 </label>
               </div>
               <div class="app">
-                <input type="checkbox" class="hidden-checkbox" id="meal9" />
+                <input type="checkbox" class="hidden-checkbox" id="meal9">
                 <label for="meal9" class="meal__label">
-                  <div class="meal">
-                    <div class="meal__title">
-                      <h3 class="meal-text">Tarte au citron meringuée</h3>
-                      <p class="meal-text">Déstructurée</p>
-                    </div>
-                    <div class="meal__price">
-                      <p>23€</p>
-                    </div>
-                    <div class="meal__check">
+                  <span class="meal">
+                    <span class="meal__title">
+                      <span class="meal-text h4">Tarte au citron meringuée </span>
+                      <span class="meal-text p">
+                        Déstructurée
+                      </span>
+                    </span>
+                    <span class="meal__price"> 23€ </span>
+                    <span class="meal__check">
                       <i class="fa-solid fa-circle-check"></i>
-                    </div>
-                  </div>
+                    </span>
+                  </span>
                 </label>
               </div>
             </div>
           </div>
         </div>
-        <!--------- Bouton -------------->
-        <section class="article">
+        <!-- Bouton -->
+        <div class="article">
           <button class="article__button">Commander</button>
-        </section>
+        </div>
       </article>
       <footer class="footer">
         <div class="footer__container">
