@@ -136,7 +136,7 @@ a {
     input {
       height: 19px;
       font-size: large;
-      width: 120px;
+      width: 140px;
       margin-left: 10px;
     }
   }
@@ -694,7 +694,7 @@ a {
   }
   to {
     opacity: 0;
-    display: none;
+    visibility: hidden;
   }
 }
 
